@@ -31,7 +31,6 @@ services:
     volumes:
       - /home/ska/hw_elk/logstash.conf:/usr/share/logstash/config/logstash.conf
       - /home/ska/hw_elk/logstash.yaml:/usr/share/logstash/config/logstash.yaml
-      - /home/ska/hw_elk/output.txt:/usr/share/logstash/output.txt
       - /home/ska/hw_elk/nginxlog:/usr/share/logstash/nginx
     command: logstash -f /usr/share/logstash/config/logstash.conf
     depends_on:
